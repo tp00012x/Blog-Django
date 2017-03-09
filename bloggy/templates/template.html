@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Coding Temple</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--This will show any of our flash messages from our blog.py file, if any are available-->
+        {% for message in get_flashed_messages() %}
+        <div class="flash">{{message}}</div>
+        {% endfor %} {% if error %}
+        <p class="error"><strong>Error:</strong>{{error}}</p>
+        {% endif %} {% block content%} {% endblock %}
+    </div>
+
+</body>
+
+</html>
